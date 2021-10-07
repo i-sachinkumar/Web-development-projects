@@ -5,47 +5,231 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <!--    bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"-->
+<!--            integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"-->
+<!--            crossorigin="anonymous"></script>-->
 
     <title>Bootstrap-installation</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Tinder</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-lg-auto">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href=""> Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href=""> Likes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href=""> Matches</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href=""> Setting</a>
-            </li>
-        </ul>
+
+<section id="title">
+
+    <!-- Nav Bar -->
+    <!--  we'll be adding Nav bar with bootstrap  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img class="nav-logo" src="images/tinder-logo.png">
+            <a class="navbar-brand me-auto" href="#">tinder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href=""> Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""> Likes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""> Matches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""> Setting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- responsive layout according to change in screen size -->
+
+<!--    this div is unresponsive as screen size changes-->
+    <div class="row"> <!-- create a row with as many column as no of child it has -->
+        <div class="col" style="color:white;background-color: #0f5132; border: 1px solid"> col </div>
+        <div class="col" style="color:white;background-color:#0f5132; border: 1px solid"> col </div>
     </div>
-</nav>
+
+    <!--    this div is also unresponsive as screen size changes
+            but we can customize column width-->
+    <div class="row">
+        <!-- create a row with as many column as no of child it has
+             num with col represent total num of column
+             **(screen width = 12 column)**
+             in this case first div is for 50% screen which has 6 column
+             in next div we added 3 column so it'll take half of remaining screen-->
+        <div class="col-8" style="color:white;background-color: gray; border: 1px solid"> col </div>
+        <div class="col-4" style="color:white;background-color: gray; border: 1px solid"> col </div>
+    </div>
+
+    <!--    this div is responsive as screen size changes-->
+    <div class="row">
+        <!-- lg == large (in large screen, each col will take 3 out of 12 col means we'll see 4 col in each row)
+             md == medium (in medium screen, each col will take 4 out of 12 col means we'll see 3 col in each row)
+             sm == small (in small screen, each col will take 6 out of 12 col means we'll see 2 col in each row)
+         -->
+        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid"> col </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid"> col </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid"> col </div>
+        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid"> col </div>
+    </div>
 
 
 
 
-<!-- Optional JavaScript; choose one of the two! -->
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--&lt;!&ndash;-->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    <div>
+        <h1>Meet new and interesting dogs nearby.</h1>
+        <button type="button">Download</button>
+        <button type="button">Download</button>
+    </div>
+    <div>
+        <img src="images/iphone6.png" alt="iphone-mockup">
+    </div>
+
+</section>
+
+
+<!-- Features -->
+
+<section id="features">
+
+    <h3>Easy to use.</h3>
+    <p>So easy to use, even your dog could do it.</p>
+
+    <h3>Elite Clientele</h3>
+    <p>We have all the dogs, the greatest dogs.</p>
+
+    <h3>Guaranteed to work.</h3>
+    <p>Find the love of your dog's life or your money back.</p>
+
+</section>
+
+
+<!-- Testimonials -->
+
+<section id="testimonials">
+
+    <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+    <img src="images/dog-img.jpg" alt="dog-profile">
+    <em>Pebbles, New York</em>
+
+    <!-- <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+    <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+    <em>Beverly, Illinois</em> -->
+
+</section>
+
+
+<!-- Press -->
+
+<section id="press">
+    <img src="images/techcrunch.png" alt="tc-logo">
+    <img src="images/tnw.png" alt="tnw-logo">
+    <img src="images/bizinsider.png" alt="biz-insider-logo">
+    <img src="images/mashable.png" alt="mashable-logo">
+
+</section>
+
+
+<!-- Pricing -->
+
+<section id="pricing">
+
+    <h2>A Plan for Every Dog's Needs</h2>
+    <p>Simple and affordable price plans for your and your dog.</p>
+
+
+    <h3>Chihuahua</h3>
+    <h2>Free</h2>
+    <p>5 Matches Per Day</p>
+    <p>10 Messages Per Day</p>
+    <p>Unlimited App Usage</p>
+    <button type="button">Sign Up</button>
+
+
+    <h3>Labrador</h3>
+    <h2>$49 / mo</h2>
+    <p>Unlimited Matches</p>
+    <p>Unlimited Messages</p>
+    <p>Unlimited App Usage</p>
+    <button type="button">Sign Up</button>
+
+
+    <h3>Mastiff</h3>
+    <h2>$99 / mo</h2>
+    <p>Pirority Listing</p>
+    <p>Unlimited Matches</p>
+    <p>Unlimited Messages</p>
+    <p>Unlimited App Usage</p>
+    <button type="button">Sign Up</button>
+
+</section>
+
+
+<!-- Call to Action -->
+
+<section id="cta">
+
+    <h3>Find the True Love of Your Dog's Life Today.</h3>
+    <button type="button">Download</button>
+    <button type="button">Download</button>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer id="footer">
+
+    <p>© Copyright 2018 TinDog</p>
+
+</footer>
+
+
+<!--&lt;!&ndash; Optional JavaScript; choose one of the two! &ndash;&gt;-->
+
+<!--&lt;!&ndash; Option 1: Bootstrap Bundle with Popper &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"-->
+<!--        crossorigin="anonymous"></script>-->
+
+<!--&lt;!&ndash; Option 2: Separate Popper and Bootstrap JS &ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"-->
+<!--        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"-->
+<!--        integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"-->
+<!--        crossorigin="anonymous"></script>-->
 
 </body>
 </html>

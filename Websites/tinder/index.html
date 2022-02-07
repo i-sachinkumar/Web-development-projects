@@ -32,7 +32,7 @@
     <!--                integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"-->
     <!--                crossorigin="anonymous"></script>-->
 
-    <title>Bootstrap-installation</title>
+    <title>tinder - find a match</title>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 
     <!-- Nav Bar -->
     <!--  we'll be adding Nav bar with bootstrap  -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <img class="nav-logo" src="images/tinder-logo.png">
         <a class="navbar-brand me-auto" href="#">tinder</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -60,57 +60,11 @@
                     <a class="nav-link" href=""> Matches</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=""> Setting</a>
+                    <a class="nav-link" href=""> Settings</a>
                 </li>
             </ul>
         </div>
     </nav>
-
-
-    <!-- responsive layout according to change in screen size -->
-
-    <!--    this div is unresponsive as screen size changes-->
-    <div class="row"> <!-- create a row with as many column as no of child it has -->
-        <div class="col" style="color:white;background-color: #0f5132; border: 1px solid"> unresponsive col</div>
-        <div class="col" style="color:white;background-color:#0f5132; border: 1px solid"> unresponsive col</div>
-    </div>
-
-    <!--    this div is also unresponsive as screen size changes
-            but we can customize column width-->
-    <div class="row">
-        <!-- create a row with as many column as no of child it has
-             num with col represent total num of column
-             **(screen width = 12 column)**
-             in this case first div is for 50% screen which has 6 column
-             in next div we added 3 column so it'll take half of remaining screen-->
-        <div class="col-8" style="color:white;background-color: gray; border: 1px solid">unresponsive col</div>
-        <div class="col-4" style="color:white;background-color: gray; border: 1px solid">unresponsive col</div>
-    </div>
-
-    <!--    this div is responsive as screen size changes-->
-    <div class="row">
-        <!-- lg == large (in large screen, my each col will take 3 out of 12 col means we'll see 4 col in each row)
-             md == medium (in medium screen, my each col will take 4 out of 12 col means we'll see 3 col in each row)
-             sm == small (in small screen, my each col will take 6 out of 12 col means we'll see 2 col in each row)
-         -->
-        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">
-            responsive
-            col
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">
-            responsive
-            col
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">
-            responsive
-            col
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">
-            responsive
-            col
-        </div>
-    </div>
-
 
     <div class="row container-fluid">
         <div class="col-lg-6">
@@ -164,15 +118,21 @@
     <div id="testimonial-slides" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <h2>We found the best one for each other on tinder. Love at first swipe. Woohoo.</h2>
+                <h2>We found the best one for each other on tinder. <br> Love at first swipe. Woohoo.</h2>
                 <img class="img-testimonial" src="images/img-testimonial-1.jpg" alt="dog-profile">
                 <em>Chris & Ashley</em>
             </div>
             <div class="carousel-item">
-                <h2 class="testimonial-text">I used to be so lonely, but with tinder's help, I've found the love of my
+                <h2 class="testimonial-text">I used to be so lonely, but with tinder's help,<br> I've found the love of my
                     life.</h2>
                 <img class="img-testimonial" src="images/lady-img.jpg" alt="lady-profile">
                 <em>Beverly, Illinois</em>
+            </div>
+            <div class="carousel-item">
+                <h2 class="testimonial-text">I was so sad earlier, then one day I got a match on tinder, she gave me a
+                    suggestion, now I'm very happy with my hands</h2>
+                <img class="img-testimonial" src="images/subhash.jpg" alt="subhash-profile">
+                <em>Subhash, India</em>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-slides" data-bs-slide="prev">
@@ -204,17 +164,18 @@
 
 <section id="pricing">
 
-    <h2>A Plan for Every Dog's Needs</h2>
+    <h2>A Plan for Every Individual's Needs</h2>
     <p>Simple and affordable price plans for your and your dog.</p>
 
     <div class="row">
         <div class="btn-pricing col-lg-4 col-md-6">
             <div class="card ">
                 <div class="card-header">
-                    <h3>Chihuahua</h3>
+                    <h3>Regular</h3>
                 </div>
                 <div class="card-body">
                     <h2>Free</h2>
+                    <p class="strikethrough">Priority Listing</p>
                     <p>5 Matches Per Day</p>
                     <p>10 Messages Per Day</p>
                     <p>Unlimited App Usage</p>
@@ -229,10 +190,11 @@
         <div class="btn-pricing col-lg-4 col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h3>Labrador</h3>
+                    <h3>Gold</h3>
                 </div>
                 <div class="card-body">
                     <h2>$49 / mo</h2>
+                    <p class="strikethrough">Priority Listing</p>
                     <p>Unlimited Matches</p>
                     <p>Unlimited Messages</p>
                     <p>Unlimited App Usage</p>
@@ -246,11 +208,11 @@
         <div class="btn-pricing col-lg-4">
             <div class="card">
                 <div class="card-header">
-                    <h3>Mastiff</h3>
+                    <h3>Platinum</h3>
                 </div>
                 <div class="card-body">
                     <h2>$99 / mo</h2>
-                    <p>Pirority Listing</p>
+                    <p>Priority Listing</p>
                     <p>Unlimited Matches</p>
                     <p>Unlimited Messages</p>
                     <p>Unlimited App Usage</p>
@@ -268,9 +230,12 @@
 
 <section id="cta">
 
-    <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
+    <h3>Get the True Love for Your Life Today.</h3>
+    <button class="btn btn-dark btn-lg btn-download" type="button"><i class="fab fa-apple"></i> Download
+    </button>
+    <button class="btn btn-outline-light btn-lg btn-download" type="button"><i class="fab fa-google-play"></i>
+        Download
+    </button>
 
 </section>
 
@@ -280,7 +245,56 @@
 <footer id="footer">
 
     <p>© Copyright 2021 tinder</p>
+    <p>Sachin Kumar, inc.</p>
 
 </footer>
+
+
+<!--<section id="columns">-->
+<!--    &lt;!&ndash; responsive layout according to change in screen size &ndash;&gt;-->
+
+<!--    &lt;!&ndash;    this div is unresponsive as screen size changes&ndash;&gt;-->
+<!--    <div class="row"> &lt;!&ndash; create a row with as many column as no of child it has &ndash;&gt;-->
+<!--        <div class="col" style="color:white;background-color: #0f5132; border: 1px solid"> unresponsive col</div>-->
+<!--        <div class="col" style="color:white;background-color:#0f5132; border: 1px solid"> unresponsive col</div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;    this div is also unresponsive as screen size changes-->
+<!--            but we can customize column width&ndash;&gt;-->
+<!--    <div class="row">-->
+<!--        &lt;!&ndash; create a row with as many column as no of child it has-->
+<!--             num with col represent total num of column-->
+<!--             **(screen width = 12 column)**-->
+<!--             in this case first div is for 50% screen which has 6 column-->
+<!--             in next div we added 3 column so it'll take half of remaining screen&ndash;&gt;-->
+<!--        <div class="col-8" style="color:white;background-color: gray; border: 1px solid">unresponsive col</div>-->
+<!--        <div class="col-4" style="color:white;background-color: gray; border: 1px solid">unresponsive col</div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;    this div is responsive as screen size changes&ndash;&gt;-->
+<!--    <div class="row">-->
+<!--        &lt;!&ndash; lg == large (in large screen, my each col will take 3 out of 12 col means we'll see 4 col in each row)-->
+<!--             md == medium (in medium screen, my each col will take 4 out of 12 col means we'll see 3 col in each row)-->
+<!--             sm == small (in small screen, my each col will take 6 out of 12 col means we'll see 2 col in each row)-->
+<!--         &ndash;&gt;-->
+<!--        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">-->
+<!--            responsive-->
+<!--            col-->
+<!--        </div>-->
+<!--        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">-->
+<!--            responsive-->
+<!--            col-->
+<!--        </div>-->
+<!--        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">-->
+<!--            responsive-->
+<!--            col-->
+<!--        </div>-->
+<!--        <div class="col-lg-3 col-md-4 col-sm-6" style="color:white;background-color: teal; border: 1px solid">-->
+<!--            responsive-->
+<!--            col-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
 </body>
 </html>
